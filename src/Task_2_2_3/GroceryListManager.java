@@ -52,7 +52,7 @@ public class GroceryListManager {
         for (String cat : itemCategory.values()) {
             System.out.println("Added to set: " + cat);
             catSet.add(cat);
-            }
+        }
 
         for (String cat : catSet) {
             System.out.println(cat);
