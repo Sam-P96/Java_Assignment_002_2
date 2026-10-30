@@ -66,11 +66,22 @@ public class GroceryListManager {
             }
 
         for (String cat : catSet) {
+            System.out.println("");
             System.out.println(cat);
             for (String iKey : itemCategory.keySet()) {
                 if (itemCategory.get(iKey) == cat) {
                     System.out.println(iKey + ": " + groceryList.get(iKey) + " [" + itemQuantity.get(iKey) + "]");
                 }
+            }
+        }
+    }
+
+    public void displayAvailableItem() {
+        System.out.println("");
+        System.out.println("All Available Items: ");
+        for (String iKey : groceryList.keySet()) {
+            if (itemQuantity.get(iKey) > 0) {
+                System.out.println(iKey + ": " + groceryList.get(iKey) + " [" + itemQuantity.get(iKey) + "]");
             }
         }
     }
@@ -101,13 +112,15 @@ public class GroceryListManager {
 
         System.out.println("UPDATE STUFF:");
         kevin.updateQuantity("Sam3", 3);
-        kevin.updateQuantity("Sam", 9);
+        kevin.updateQuantity("Sam", 0);
 
 //        kevin.displayList();
 
 //
         System.out.println("");
         kevin.displayByCat();
+
+        kevin.displayAvailableItem();
 
         System.out.println("");
         System.out.println("Total Cost: " + kevin.calculateTotalCost());
