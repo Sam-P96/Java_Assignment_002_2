@@ -25,7 +25,7 @@ public class GroceryListManager {
         }
     }
 
-    /* will not make a for loop list, cus this is easier to read in testing.*/
+    /* will not make a for loop list, cus this is easier to read in testing .*/
     public void displayList() {
         System.out.println(groceryList.toString());
     }
