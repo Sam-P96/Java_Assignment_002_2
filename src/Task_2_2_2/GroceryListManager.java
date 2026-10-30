@@ -1,12 +1,11 @@
 package Task_2_2_2;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class GroceryListManager {
     private HashMap<String, Double> groceryList = new HashMap<>();
 
-    public void addItem(String item, Double price) {
+    public void addItem(String item, double price) {
         groceryList.put(item, price);
         System.out.println("Added " + item + " at " + price);
     }
@@ -31,7 +30,7 @@ public class GroceryListManager {
     }
 
     /*like dictionary and set, no index, uses keys*/
-    public double totalCost() {
+    public double calculateTotalCost() {
         double totalCostDollars = 0.0;
         for (double price : groceryList.values()) {
             totalCostDollars += price;
@@ -57,6 +56,6 @@ public class GroceryListManager {
 
         kevin.displayList();
 
-        System.out.println("Total Cost: " + kevin.totalCost());
+        System.out.println("Total Cost: " + kevin.calculateTotalCost());
     }
 }
