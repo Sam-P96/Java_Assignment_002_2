@@ -90,12 +90,22 @@ public class GroceryListManager {
         this.addItem(key, groceryList.get(key), itemCategory.get(key), newQ);
     }
 
+    public void displayByCategory(String item) {
+        System.out.println("Showing specifially: " + item);
+        for (String iKey : itemCategory.keySet()) {
+            if (itemCategory.get(iKey) == item) {
+                System.out.println(iKey);
+            }
 
+        }
+    }
 
     public static void main(String[] args) {
         GroceryListManager kevin = new GroceryListManager();
 
         kevin.addItem("Sam", 100000, "Human", 2);
+        kevin.addItem("Sam11111", 100000, "Human", 2);
+        kevin.addItem("Sam22222", 100000, "Human", 2);
         kevin.addItem("Sam2", 2, "Not Human", 3);
         kevin.addItem("Sam3", 6.7, "Not Human", 4);
         kevin.addItem("Sam3", 1.99, "Not Human", 55); /* confirming it just writes over, not like add, and stuff*/
@@ -116,6 +126,8 @@ public class GroceryListManager {
 
 //        kevin.displayList();
 
+
+
 //
         System.out.println("");
         kevin.displayByCat();
@@ -124,6 +136,12 @@ public class GroceryListManager {
 
         System.out.println("");
         System.out.println("Total Cost: " + kevin.calculateTotalCost());
+
+
+        System.out.println("");
+        System.out.println("");
+        System.out.println("This was missing in Task 3 cus I misunderstood the task and I accidentally did task 5 in task 4 cus I didnt know that was the next question. Was just having fun.");
+        kevin.displayByCategory("Human");
     }
 }
 
